@@ -1,8 +1,8 @@
 # Write your MySQL query statement below
-SELECT 
+SELECT DISTINCT 
     P.product_name, S.year, S.price 
 FROM 
-    Product as P
+    (SELECT DISTINCT product_id, year, price FROM Sales) AS S
 INNER JOIN
-    Sales AS S
-ON P.product_id = S.product_id
+    Product AS P
+USING (product_id);
