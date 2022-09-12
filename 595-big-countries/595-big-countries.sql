@@ -13,4 +13,4 @@ SELECT
 FROM
     World
 WHERE
-   population >= 25000000
+   population >= 25000000;
