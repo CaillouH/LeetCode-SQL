@@ -4,4 +4,4 @@ SELECT extra AS report_reason,
 FROM Actions
 WHERE action_date = '2019-07-04'
   AND action = "report"
-GROUP BY report_reason;
+GROUP BY extra;
