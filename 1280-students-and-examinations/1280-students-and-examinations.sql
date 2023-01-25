@@ -4,7 +4,7 @@ SELECT stu.student_id,
        sbj.subject_name,
        COUNT(e.subject_name) AS attended_exams
   FROM Students stu
-  JOIN Subjects sbj
+ CROSS JOIN Subjects sbj
  LEFT JOIN Examinations e
     ON stu.student_id = e.student_id 
    AND sbj.subject_name = e.subject_name
